@@ -19,7 +19,7 @@ class App extends React.Component {
 
   }
 
-  // Handling any auth changes in our app
+  // Handling any auth state changes in our app / firebase backend
   unsubscribeFromAuth = null
 
   componentDidMount() {
@@ -38,7 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
