@@ -16,7 +16,6 @@ import CheckoutPage from './pages/checkout/checkout.component';
 
 class App extends React.Component {
   
-
   // Handling any auth state changes in our app / firebase backend
   unsubscribeFromAuth = null
 
@@ -43,8 +42,6 @@ class App extends React.Component {
         // else, set the current user to null
         setCurrentUser(userAuth)
       }
-
-      
     })
   }
 
@@ -66,7 +63,7 @@ class App extends React.Component {
       </div>
     );
   }
-  
+
 };
 
 const mapStateToProps = createStructuredSelector ({ 
